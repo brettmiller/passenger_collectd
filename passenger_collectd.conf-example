@@ -1,0 +1,14 @@
+# Full path to passenger-status
+cmd_path: '/usr/bin/passenger-status'
+
+# Metric naming scheme, text to prepend to queue_name.metric. Defaults to <hostname>.passenger
+scheme: 
+
+# Graphite server hostname/IP address
+server: 'localhost'
+
+# TCP port Graphite server listens on. Defaults to 2003.
+server_port: '2003'
+
+# Portion of the full metric name to be removed when sent to graphite.
+metric_strip: '/var/www/'
