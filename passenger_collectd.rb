@@ -42,7 +42,7 @@ PROCESS_ELEMENTS = %w(real_memory cpu vmsize processed sessions busyness)
 while true
   
   #doc = Nokogiri::XML(File.open("#{script_dir}/passenger-out.xml"))  # for testing with a local xml file
-  doc = Nokogiri::XML(`#{options['cmd_path']} --show=xml`)
+  doc = Nokogiri::XML(`sudo #{options['cmd_path']} --show=xml`)
   
   # Get overall (top level) passenger stats
   process_count = doc.xpath('//process_count').children[0].to_s
